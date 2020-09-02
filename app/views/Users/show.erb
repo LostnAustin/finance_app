@@ -1,0 +1,11 @@
+
+<h2> <%= @user.username %> </h2>
+
+    <% @user.bills.each do |bill| %>
+        <%= bill.content %>
+    <% end %>
+
+    <% @user.investments.each do |investment| %>
+        <%= investment.content %>
+    <% end %>
+
