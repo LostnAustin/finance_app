@@ -13,3 +13,4 @@ gem 'bcrypt'
 gem "tux"
 gem 'rack-flash3'
 gem 'sinatra-flash'
+gem 'solargraph'
