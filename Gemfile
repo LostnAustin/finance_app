@@ -14,3 +14,10 @@ gem "tux"
 gem 'rack-flash3'
 gem 'sinatra-flash'
 gem 'solargraph'
+
+group :test do
+  gem 'rspec'
+  gem 'capybara'
+  gem 'rack-test'
+  gem 'database_cleaner'
+end

@@ -1,10 +1,10 @@
-class CreateBillsTable < ActiveRecord::Migration[4.2]
+class CreateBillsTable < ActiveRecord::Migration[6.0]
 
     def change
       create_table :bills do |t|
         t.integer :user_id
         t.integer :amount
-        t.content :description
+        t.string :description
       end
     end
   
