@@ -1,6 +1,5 @@
 class User < ActiveRecord::Base
     has_many :bills
-    has_many :investments
     has_secure_password
 
     def slug
