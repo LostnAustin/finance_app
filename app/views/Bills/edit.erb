@@ -1,7 +1,7 @@
 <form method="POST" action="/bills/<%= @bill.id %>">
     <input id="hidden" type="hidden" name="_method" value="PATCH">
 
-          <input type="text" name="amount" value=" <%= @bill.amount %>">
+          <input type="integer" name="amount" value=" <%= @bill.amount %>">
 
         <input type="text" name="description" value=" <%= @bill.description %>">
 

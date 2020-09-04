@@ -1,0 +1,28 @@
+
+<h2>Hi  <%= current_user.username %>, hope you're having a great day! </h2>
+    
+    <h3>Check out all your current bills! Click on a bill to edit!</h3>
+    <% current_user.bills.each do |bill| %>
+   
+    <ul> <a href="/bills/#{@bill.id}/edit"> <li> <%= bill.description %> </a> ___________$<%= bill.amount %> </li> <br>
+        <% end %>
+    </ul>
+
+   
+
+   
+    <h3>Your Current Monthly Bills Total</h3>
+    <% bills_amount = [] %>
+        <% current_user.bills.each do |bill| %>
+            <% bills_amount << bill.amount %>
+            
+         
+    <% end %>
+
+    $<%= bills_amount.sum %>
+    <h3>Annual(Yearly) Sum:</h3>  $<%= bills_amount.sum * 12 %>
+
+
+<h4> <a href="/bills/new">Create a Bill</a> </h4>
+<h4> <a href="/logout">Logout</a> </h4>
+
