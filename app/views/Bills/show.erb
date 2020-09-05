@@ -1,12 +1,13 @@
 <h1>Edit bill</h1>
 
-<p> <%= @bill %> 
+<p> <%= @bill.description %> ------>
+    $<%= @bill.amount %>
 </p>
 
+<a href="/bills/<%= bill.id %>/edit">Edit</a>
 
-<h3> <a href='/bills/<%= @bill.id %>/edit'>Edit bill</a> </h3>
 <br />
 
 <h3> <a href='/bills/new'>Create Another bill</a> </h3>
 <br />
-<h3> <a href="/bills">Home</a> </h3>
+<h3> <a href="/bills/bills">Home</a> </h3>

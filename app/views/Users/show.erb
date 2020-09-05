@@ -1,6 +1,12 @@
 hi
 
 
+<%= @user %>
+
+<% @user.bills.each do |bill| %>
+    <%= bill.amount %>
+    <% end %>
+
 
 <h3> <a href="/logout">Logout</a> </h3>
 

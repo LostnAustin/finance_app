@@ -4,7 +4,7 @@
     <h3>Check out all your current bills! Click on a bill to edit!</h3>
     <% current_user.bills.each do |bill| %>
    
-    <ul> <a href="/bills/#{@bill.id}/edit"> <li> <%= bill.description %> </a> ___________$<%= bill.amount %> </li> <br>
+    <ul> <a href="/bills/<%= bill.id %>/edit"> <li> <%= bill.description %> </a> ___________$<%= bill.amount %> </li> </a> <br>
         <% end %>
     </ul>
 

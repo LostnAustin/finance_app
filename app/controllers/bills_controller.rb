@@ -3,7 +3,7 @@ class BillsController < ApplicationController
     get '/bills' do
         if logged_in   
           @bills = Bill.all
-          erb :'/bills/show'
+          erb :'/bills/bills'
         else
           redirect '/login'
         end
@@ -18,7 +18,7 @@ class BillsController < ApplicationController
         end
       end
     
-      post '/bills/show' do
+      post '/bills' do
         if logged_in
           if params[:amount] == "" || params[:description] == ""
             redirect '/bills/new'
@@ -52,7 +52,7 @@ class BillsController < ApplicationController
             if @bill && @bill.user == current_user
             erb :"/bills/edit"
             else
-            redirect '/bills/edit'
+            redirect '/bills/show'
             end
           else
             redirect '/login'
@@ -67,7 +67,7 @@ class BillsController < ApplicationController
           else
             @bill = Bill.find_by_id(params[:id])
             if @bill && @bill.user == current_user
-              if @bill.update(amount: params[:amount])
+              if @bill.update(amount: params[:amount], description: params[:description])
                 redirect  "/bills/#{@bill.id}"
               else
                 redirect  "/bills/#{@bill.id}/edit"
