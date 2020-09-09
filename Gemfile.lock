@@ -44,6 +44,7 @@ GEM
     minitest (5.14.2)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
+    nginx (0.0.2)
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
     parallel (1.19.2)
@@ -156,6 +157,7 @@ DEPENDENCIES
   bcrypt
   capybara
   database_cleaner
+  nginx
   pry
   rack-flash3
   rack-test
