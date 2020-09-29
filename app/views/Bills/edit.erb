@@ -7,3 +7,8 @@
 
     <input class="btn" type="submit" name="submit" value="submit">
 </form>
+
+<form method="POST" action="/bills/<%= @bill.id %>/delete">
+<input id='hidden' type='hidden' name='_method' value='DELETE'>
+<input type='submit' name='submit' value='Delete Bill'>
+</form>

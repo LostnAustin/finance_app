@@ -52,7 +52,7 @@ class BillsController < ApplicationController
             if @bill && @bill.user == current_user
             erb :"/bills/edit"
             else
-            redirect '/bills/show'
+            redirect '/bills'
             end
           else
             redirect '/login'
@@ -67,7 +67,7 @@ class BillsController < ApplicationController
           else
             @bill = Bill.find_by_id(params[:id])
             if @bill && @bill.user == current_user
-              if @bill.update(amount: params[:amount], description: params[:description])
+              if @bill.update(description: params[:description], amount: params[:amount])
                 redirect  "/bills/#{@bill.id}"
               else
                 redirect  "/bills/#{@bill.id}/edit"
