@@ -10,7 +10,6 @@ class User < ActiveRecord::Base
         User.all.find{|user| user.slug == slug}
       end
 
-      # validates :username, format: { without: /[0-9]/, message: "does not allow numbers" }
-      # validates :email, uniqueness: true
+    
      
 end
